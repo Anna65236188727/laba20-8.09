@@ -1,11 +1,13 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 .container {
   .menu {
     background-color: rgb(55, 0, 255);
+
     ul {
       color: aliceblue;
       width: 60%;
@@ -17,13 +19,25 @@
       list-style-type: none;
       font-size: 20px;
     }
+
     li:hover {
       text-decoration: underline;
     }
   }
-  .one_users, .pol {
+
+  .one_users {
     width: 80%;
     margin: 0 auto;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 1%;
+    margin-top: 1%;
+  }
+  .pol{
+    width: 80%;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: bold;
   }
 
   .user {
@@ -35,11 +49,45 @@
     // border: 3px #4000ff solid;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     padding: 1rem;
+    height: 145px;
+    border-radius: 6px;
   }
-.card {
-    display: flex;
-    justify-content: center;
+
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     width: 80%;
-    margin: 0 auto;
-}
+    margin: 2vh auto;
+    flex-wrap: wrap;
+
+    .card-title {
+      font-size: 24px;
+    }
+    .user{
+      .card-text{
+        margin-bottom: 10px;
+      }
+      .card-title{
+        margin-bottom: 10px;
+      }
+      .btn {
+      background-color: rgb(55, 0, 255);
+      margin-top: 22px;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      padding: 3% 5%;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      transition-duration: 0.4s;
+    }
+    .btn:hover{
+      background-color: #ffffff; /* Green */
+      color: rgb(0, 0, 0);
+      border: 1px solid rgb(55, 0, 255);
+    }
+  }
+    
+  }
 }

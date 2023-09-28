@@ -42,14 +42,17 @@ export default function Users() {
       {users?.length > 0 ? (
         <>
           <div className="card">
-            {users.map((el, id) => (
-              <div className="user">
-                <p>{el.name}</p>
-                <p>{el.surname}</p>
-                <p>{el.thirname}</p>
-                <p>{el.age}</p>
-                <p>{el.phone}</p>
+          {users.map((el, id) => (
+            <div className="card" key={id}>
+              <div className="user" style={{ width: '18rem' }}>
+                <div className="card-body">
+                  <h5 className="card-title">{el.name} {el.surname} {el.thirname}</h5>
+                  <p className="card-text">Почта: {el.email}</p>
+                  <p className="card-text">Телефон: {el.phone}</p>
+                  <a href="#" className="btn btn-primary">Подробнее</a>
+                </div>
               </div>
+            </div>
             ))}
           </div>
         </>
